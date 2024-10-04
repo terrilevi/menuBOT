@@ -4,6 +4,8 @@ import csv
 from datetime import datetime
 import random
 
+st.title("a little chat")
+
 try:
     import openai
     openai_available = True
