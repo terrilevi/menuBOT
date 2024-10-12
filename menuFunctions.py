@@ -1,11 +1,39 @@
 import json
 import logging
-
 logging.basicConfig(level=logging.INFO)
-
 def load_menu():
     with open('menu.json', 'r') as f:
         return json.load(f)
+
+
+
+
+#####FORMATEOS#####
+
+def format_categories(categories):
+    formatted = "Estas son nuestras categorías del menú:\n\n"
+    for category in categories:
+        formatted += f"- {category}\n\n"
+    return formatted + "¿Te gustaría conocer los productos dentro de alguna de estas categorías?"
+
+def format_summarized_menu(menu_json):
+    menu = json.loads(menu_json)
+    formatted = "Este es nuestro menú completo:\n\n"
+    for category in menu['categories']:
+        formatted += f"**{category['name']}**\n"
+        for item in category['items']:
+            formatted += f"- {item['name']}: "
+            if len(item['sizes']) == 1:
+                formatted += f"${item['sizes'][0]['price']:.2f}\n"
+            else:
+                sizes = ", ".join([f"{size['name']} ${size['price']:.2f}" for size in item['sizes']])
+                formatted += f"{sizes}\n"
+        formatted += "\n"
+    return formatted + "¿Qué te gustaría ordenar o sobre qué quieres saber más?"
+
+
+
+####FUNCIONES#####
 
 def get_summarized_menu():
     logging.info("get_summarized_menu function called")
@@ -23,7 +51,14 @@ def get_summarized_menu():
             }
             summarized_category["items"].append(summarized_item)
         summarized_menu["categories"].append(summarized_category)
-    return json.dumps(summarized_menu, indent=2)
+    return format_summarized_menu(json.dumps(summarized_menu))
+
+def get_menu_categories():
+    logging.info("get_menu_categories function called")
+    menu = load_menu()
+    categories = [category["name"] for category in menu["menu"]["categories"]]
+    return format_categories(categories)
+
 
 def get_items_by_categories(categories):
     menu = load_menu()
@@ -46,13 +81,6 @@ def get_items_by_categories(categories):
     return json.dumps(items_by_category, indent=2)
 
 
-def get_menu_categories():
-    logging.info("get_menu_categories function called")
-    menu = load_menu()
-    categories = [category["name"] for category in menu["menu"]["categories"]]
-    return json.dumps(categories, indent=2)
-
-
 
 def get_item_details(item_name):
     logging.info("get_item_details function called")
@@ -64,29 +92,6 @@ def get_item_details(item_name):
     return json.dumps({"error": "Item not found"}, indent=2)
 
 
-
-def get_all_products_with_prices():
-    logging.info("get_all_products_with_prices function called")
-    menu = load_menu()
-    all_products = []
-
-    for category in menu["menu"]["categories"]:
-        for item in category["items"]:
-            product_info = {
-                "name": item["name"],
-                "category": category["name"],
-                "prices": []
-            }
-            
-            for size in item["sizes"]:
-                price_info = {
-                    "price": size["price"]
-                }
-                if size["name"] != "Regular" or len(item["sizes"]) > 1:
-                    price_info["size"] = size["name"]
-                product_info["prices"].append(price_info)
-            
-            all_products.append(product_info)
 
     return json.dumps(all_products, indent=2)
 
