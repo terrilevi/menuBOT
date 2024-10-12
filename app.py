@@ -1,8 +1,12 @@
 import streamlit as st
 from chatbot import process_user_input
 
-st.title("fatBot")
+st.title("Bienvenido a CiberDelicias 🍽️ ")
+st.markdown("""
+Bienvenido a CiberDelicias. Estamos aquí para servirte.
 
+Pregúntanos sobre nuestro menú o haz tu pedido cuando estés listo.
+""")
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
