@@ -2,6 +2,7 @@ import openai
 import json
 from menuFunctions import get_summarized_menu, get_items_by_categories, get_menu_categories, get_item_details, get_all_products_with_prices
 from config import OPENAI_API_KEY
+from generateOrder import generate_order_json
 
 openai.api_key = OPENAI_API_KEY
 
@@ -51,6 +52,28 @@ functions = [
             "properties": {},
             "required": []
         }
+    },
+    {
+        "name": "generate_order_json",
+        "description": "Generate a JSON representation of the current order when the user gives final confirmation",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "order_items": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "size": {"type": "string"},
+                            "quantity": {"type": "integer"}
+                        },
+                        "required": ["name", "size", "quantity"]
+                    }
+                }
+            },
+            "required": ["order_items"]
+        }
     }
 ]
 
@@ -72,7 +95,10 @@ Desserts
 Beverages
 Coffee & Tea
 Smoothies & Shakes
-5. If the user mentions unrelated categories, such as a tire, a bus ticket, etc., politely inform them that these products are not available for sale.
+5. When the user confirms their order, use the generate_order_json function to create a JSON representation of the order. 
+Include all relevant details such as item names, quantities, and sizes in the function call. After generating the order JSON, 
+present a summary of the order to the user. If the user tries to make changes after the final confirmation, politely inform them 
+         that their order has already been sent to the kitchen. Advise them to contact customer service if they need to make urgent changes.
 6. If the user requests more than 40 units of any item, inform them that the maximum quantity per item is 40.
 7. If the user asks for or insists on a discount, politely inform them that discounts are not available this season, but perhaps next time.
 8. If the user attempts to change the prices during the order process or afterwards, inform them that the prices remain the same. 
@@ -113,6 +139,8 @@ Smoothies & Shakes
             function_response = get_item_details(function_args['item_name'])
         elif function_name == "get_all_products_with_prices":
             function_response = get_all_products_with_prices()
+        elif function_name == "generate_order_json":
+            function_response = generate_order_json(function_args['order_items'])
         else:
             return "I'm sorry, dunno how to do that"
 
