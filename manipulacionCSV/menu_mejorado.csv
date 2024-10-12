@@ -1,0 +1,74 @@
+Category,Item,Price,ServingSizeValue,ServingSizeUnit,Size
+Breakfast,Egg McMuffin,13,4.8,g,
+Breakfast,Egg White Delight,8,4.8,g,
+Breakfast,Sausage McMuffin,23,3.9,g,
+Breakfast,Steak & Egg McMuffin,23,6.5,g,
+Breakfast,"Bacon, Egg & Cheese Biscuit ",26,5.3,g,
+Chicken & Fish,Premium Crispy Chicken Ranch BLT Sandwich,28,8.1,g,
+Chicken & Fish,Premium Grilled Chicken Ranch BLT Sandwich,15,7.6,g,
+Chicken & Fish,Bacon Clubhouse Crispy Chicken Sandwich,38,10,g,
+Chicken & Fish,Bacon Clubhouse Grilled Chicken Sandwich,25,9.5,g,
+Chicken & Fish,Southern Style Crispy Chicken Sandwich,19,5.6,g,
+Chicken & Fish,McChicken,16,5.1,g,
+Chicken & Fish,Bacon Cheddar McChicken,24,6,g,
+Chicken & Fish,Bacon Buffalo Ranch McChicken,21,5.7,g,
+Chicken & Fish,Buffalo Ranch McChicken,16,5.2,g,
+Chicken & Fish,Filet-O-Fish,19,5,g,
+Snacks & Sides,Chipotle BBQ Snack Wrap ,15,4.6,g,
+Snacks & Sides,Honey Mustard Snack Wrap ,15,4.3,g,
+Snacks & Sides,Ranch Snack Wrap,20,4.5,g,
+Snacks & Sides,French Fries,11,2.6,g,Small
+Snacks & Sides,French Fries,16,3.9,g,Medium
+Snacks & Sides,French Fries,24,5.9,g,Large
+Snacks & Sides,French Fries,5,1.3,g,Child
+Snacks & Sides,Side Salad,0,3.1,g,
+Snacks & Sides,Apple Slices,0,1.2,g,
+Snacks & Sides,Fruit 'n Yogurt Parfait,2,5.2,g,
+Desserts,Baked Apple Pie,13,2.7,g,
+Desserts,Chocolate Chip Cookie,8,,,
+Desserts,Oatmeal Raisin Cookie,6,,,
+Desserts,Kids Ice Cream Cone,1.5,1,g,
+Desserts,Hot Fudge Sundae,9,6.3,g,
+Desserts,Hot Caramel Sundae,8,6.4,g,
+Desserts,Strawberry Sundae,6,6.3,g,
+Beverages,Coca-Cola Classic,10,473.18,ml,Small
+Beverages,Coca-Cola Classic,10,621.04,ml,Medium
+Beverages,Coca-Cola Classic,10,887.2,ml,Large
+Beverages,Coca-Cola Classic,10,354.88,ml,Child
+Beverages,Diet Coke,10,473.18,ml,Small
+Beverages,Diet Coke,10,621.04,ml,Medium
+Beverages,Diet Coke,10,887.2,ml,Large
+Beverages,Diet Coke,10,354.88,ml,Child
+Beverages,Dr Pepper,10,473.18,ml,Small
+Beverages,Dr Pepper,10,621.04,ml,Medium
+Beverages,Dr Pepper,10,887.2,ml,Large
+Beverages,Dr Pepper,10,354.88,ml,Child
+Coffee & Tea,Iced Tea,14,473.18,ml,Small
+Coffee & Tea,Iced Tea,14,621.04,ml,Medium
+Coffee & Tea,Iced Tea,14,887.2,ml,Large
+Coffee & Tea,Iced Tea,14,354.88,ml,Child
+Coffee & Tea,Sweet Tea,14,473.18,ml,Small
+Coffee & Tea,Sweet Tea,14,621.04,ml,Medium
+Coffee & Tea,Sweet Tea,14,887.2,ml,Large
+Coffee & Tea,Sweet Tea,14,354.88,ml,Child
+Coffee & Tea,Coffee,14,354.88,ml,Small
+Coffee & Tea,Coffee,14,473.18,ml,Medium
+Coffee & Tea,Coffee,14,473.18,ml,Large
+Coffee & Tea,Latte,17,354.88,ml,Small
+Coffee & Tea,Latte,10,473.18,ml,Medium
+Coffee & Tea,Latte,14,591.47,ml,Large
+Coffee & Tea,Caramel Latte,9,354.88,ml,Small
+Coffee & Tea,Caramel Latte,10,473.18,ml,Medium
+Coffee & Tea,Caramel Latte,14,591.47,ml,Large
+Coffee & Tea,Hazelnut Latte,9,354.88,ml,Small
+Coffee & Tea,Hazelnut Latte,14,591.47,ml,Large
+Coffee & Tea,Hazelnut Latte,10,473.18,ml,Medium
+Smoothies & Shakes,Blueberry Pomegranate Smoothie,28,354.88,ml,Small
+Smoothies & Shakes,Blueberry Pomegranate Smoothie,89,473.18,ml,Medium
+Smoothies & Shakes,Blueberry Pomegranate Smoothie,54,650.62,ml,Large
+Smoothies & Shakes,Strawberry Banana Smoothie,68,354.88,ml,Small
+Smoothies & Shakes,Strawberry Banana Smoothie,54,473.18,ml,Medium
+Smoothies & Shakes,Strawberry Banana Smoothie,64,650.62,ml,Large
+Smoothies & Shakes,Mango Pineapple Smoothie,64,354.88,ml,Small
+Smoothies & Shakes,Mango Pineapple Smoothie,24,473.18,ml,Medium
+Smoothies & Shakes,Mango Pineapple Smoothie,35,650.62,ml,Large
