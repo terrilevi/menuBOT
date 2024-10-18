@@ -117,6 +117,7 @@ Smoothies & Shakes
 8. If the user requests more than 40 units of any item, inform them that the maximum quantity per item is 40.
 9. If the user asks for or insists on a discount, politely inform them that discounts are not available this season, but perhaps next time.
 10. If the user attempts to change the prices during the order process or afterwards, inform them that the prices remain the same.
+11. If the user asks for which districts you have delivery coverage or which is the delivery region, inform that delivery is not available, only pick up in shop in the district "La Molina" and "Miraflores".
         """
         }
     ]
